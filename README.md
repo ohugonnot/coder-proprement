@@ -31,6 +31,15 @@ Le concept de "coder proprement" repose sur les principes suivants pour facilite
 7. **Documenté implicitement**  
    Privilégier des noms significatifs et un code bien structuré pour réduire le besoin de commentaires superflus.
 
+8. **Principle of Least Astonishment (POLA)**  
+   Le code doit se comporter comme le développeur s’y attend, sans surprises.
+
+9. **Éviter le code mort**  
+   Supprimer le code inutilisé ou obsolète au lieu de le laisser commenté.
+
+10. **Favoriser l’immuabilité**  
+    Préférer des objets et structures immuables pour limiter les effets de bord.
+
 ## Pourquoi c'est important ?
 
 - **Maintenance** : Un code propre est plus facile à mettre à jour, car il est compréhensible et bien organisé.
@@ -211,3 +220,11 @@ Le concept de "coder proprement" repose sur les principes suivants pour facilite
 | **L**iskov Substitution Principle (LSP)       | Une classe dérivée doit pouvoir être utilisée partout où sa classe parente est acceptée, sans comportement inattendu.             | Une classe `Square` ne doit pas casser le comportement de la classe `Rectangle` si elle en hérite.               |
 | **I**nterface Segregation Principle (ISP)     | Une classe ne doit pas être forcée d’implémenter des interfaces qu’elle n’utilise pas.                                           | Divisez une interface `Printer` en deux interfaces spécifiques : `ScannerInterface` et `PrintInterface`.          |
 | **D**ependency Inversion Principle (DIP)      | Les modules de haut niveau ne doivent pas dépendre des modules de bas niveau ; les deux doivent dépendre d’abstractions.          | Utilisez une interface `NotificationSender` que les classes `EmailSender` et `SmsSender` implémentent.           |
+
+### Collaboration et qualité logicielle
+
+- **Conventions de style partagées** (linters, formatters automatiques)  
+- **Code reviews** systématiques pour maintenir la qualité  
+- **Intégration continue (CI/CD)** avec exécution automatique des tests  
+- **Documentation vivante** (README, ADR) pour comprendre les décisions et fonctionnement  
+- **Sensibilisation aux anti-patterns** (God object, spaghetti code, commentaires excessifs)  
